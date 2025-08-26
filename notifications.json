@@ -1,0 +1,14 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Nova Funcionalidade!",
+      "body": "Agora você pode receber notificações sobre nossas novidades."
+    },
+    {
+      "id": 2,
+      "title": "Promoção Especial",
+      "body": "Confira nossos novos descontos exclusivos para usuários notificados."
+    }
+  ]
+}
