@@ -1,41 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdfaf6;
+    color: #5c3a21;
     margin: 0;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
     text-align: center;
 }
 
-header {
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 20px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 h1 {
-    color: #0056b3;
+    font-family: 'Pacifico', cursive;
+    color: #d63384;
+    font-size: 2.5em;
+    margin: 0;
 }
 
-main {
-    background: #fff;
+h2 {
+    color: #5c3a21;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #fce4ec;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #8c7851;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links li {
+    margin: 15px 0;
+}
+
+.links a {
+    display: block;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-button {
-    background-color: #007bff;
+    background-color: #d63384;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover {
-    background-color: #0056b3;
+.links a:hover {
+    background-color: #b3256b;
+    transform: scale(1.05);
+}
+
+.link-instagram { background-color: #e4405f; }
+.link-instagram:hover { background-color: #c13584; }
+
+.link-ifood { background-color: #ea1d2c; }
+.link-ifood:hover { background-color: #cc1a25; }
+
+.link-whatsapp { background-color: #25d366; }
+.link-whatsapp:hover { background-color: #128c7e; }
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #a1887f;
 }
