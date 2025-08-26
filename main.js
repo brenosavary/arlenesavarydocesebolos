@@ -19,8 +19,16 @@ notificationButton.addEventListener('click', () => {
   Notification.requestPermission(status => {
     console.log('Status da permissão de notificação:', status);
     if (status === 'granted') {
-      alert('Permissão para notificações concedida!');
       notificationButton.disabled = true;
+      navigator.serviceWorker.ready.then(registration => {
+        return registration.sync.register('get-notifications');
+      }).then(() => {
+        console.log('Sincronização de fundo "get-notifications" registrada.');
+        alert('Permissão para notificações concedida! Você receberá uma notificação em breve.');
+      }).catch(err => {
+        console.error('Falha ao registrar a sincronização de fundo:', err);
+        alert('Permissão para notificações concedida, mas falha ao agendar a notificação.');
+      });
     } else {
       alert('Permissão para notificações negada.');
     }
