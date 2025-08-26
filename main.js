@@ -34,3 +34,17 @@ notificationButton.addEventListener('click', () => {
     }
   });
 });
+
+const manualSyncButton = document.getElementById('manual-sync');
+
+manualSyncButton.addEventListener('click', () => {
+  navigator.serviceWorker.ready.then(registration => {
+    return registration.sync.register('get-notifications');
+  }).then(() => {
+    console.log('Sincronização de fundo "get-notifications" registrada.');
+    alert('Sincronização manual solicitada! Você receberá uma notificação em breve.');
+  }).catch(err => {
+    console.error('Falha ao registrar a sincronização de fundo:', err);
+    alert('Falha ao agendar a notificação manual.');
+  });
+});
